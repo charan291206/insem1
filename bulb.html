@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Image Changes on Button Click</h1>
+    <p>javascript on-click and event to chage the image when button is clicked</p>
+    <img id="bulb" src="off.jpg" style="width:100px ;height:120px;">
+    <br>
+    <button id="bulbButton" onclick="change()">On</button>
+    <script>
+        function change(){
+            let image = document.getElementById('bulb');
+            if (image.src.match("off.jpg")){
+                image.src="on.jpg";
+                document.getElementById("bulbButton").innerHTML="Off";
+            } else {
+                image.src="off.jpg";
+                document.getElementById("bulbButton").innerHTML="On";
+            }
+        }
+    </script>
+</body>
+</html>
